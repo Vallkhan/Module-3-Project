@@ -31,9 +31,9 @@ max_profit_date = dates[change.index(max_profit)+1]
 min_profit = min(change)
 min_profit_date = dates[change.index(min_profit)+1]
 
-analysis_path = os.path.join(r'C:\Users\vallk\Desktop\Boot_Camp\Python\Repository\Module-3-Project\PyBank\analysis','Financial_Analysis.txt')
+analysis_path = os.path.join("analysis", "Financial_Analysis.txt")
 
-analysis = open('Financial_Analysis.txt','w')
+analysis = open(analysis_path,'w')
 
 analysis.write("\n"+"\n"+"Financial Analysis")
 analysis.write("\n"+"\n"+"---------------------------")

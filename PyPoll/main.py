@@ -2,6 +2,7 @@ import os.path
 import csv
 
 with open(r'C:\Users\vallk\Desktop\Boot_Camp\Python\Repository\Module-3-Project\PyPoll\Resources\election_data.csv') as file:
+
     raw_data = csv.reader(file)
     header = next(raw_data)
     
@@ -57,7 +58,7 @@ Stockham_percentage = format(Stockham_votes/len(candidate),".3%")
 DeGette_percentage = format(DeGette_votes/len(candidate),".3%")
 Doane_percentage = format(Doane_votes/len(candidate),".3%")
 
-results_path = os.path.join(r'C:\Users\vallk\Desktop\Boot_Camp\Python\Repository\Module-3-Project\PyPoll\analysis','Election_results.txt')
+results_path = os.path.join(r"C:\Users\vallk\Desktop\Boot_Camp\Python\Repository\Module-3-Project\PyPoll\analysis", "Election_Results.txt")
 
 results = open(results_path, 'w')
 
