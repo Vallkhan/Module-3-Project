@@ -1,7 +1,7 @@
 import os
 import csv
 
-csvpath =os.path.join(".","Resources","budget_data.csv")
+csvpath =os.path.join("..","PyBank","Resources","budget_data.csv")
 
 with open(csvpath,"r",encoding="utf") as file:
     raw_data = csv.reader(file)
@@ -36,7 +36,7 @@ min_profit = min(change)
 min_profit_date = dates[change.index(min_profit)+1]
 
 # Generated txt file with the results
-analysis_path = os.path.join(".","analysis", "Financial_Analysis.txt")
+analysis_path = os.path.join("..","PyBank","analysis", "Financial_Analysis.txt")
 analysis = open(analysis_path,'w')
 
 analysis.write("\n"+"\n"+"Financial Analysis")

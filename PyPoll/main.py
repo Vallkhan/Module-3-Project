@@ -1,9 +1,9 @@
 import os
 import csv
 
-csv_path = os.path.join(".","Resources","election_data.csv")
+csv_path = os.path.join("..","PyPoll", "Resources","election_data.csv")
 
-with open(csv_path) as file:
+with open(csv_path,"r",encoding="utf") as file:
     raw_data = csv.reader(file)
     header = next(raw_data)
     
@@ -62,7 +62,7 @@ Doane_percentage = format(Doane_votes/len(candidate),".3%")
 total_votes = len(ballot)
 
 # Created the txt file 
-results_path = os.path.join(".", "analysis", "Election_Results.txt")
+results_path = os.path.join("..","PyPoll", "analysis", "Election_Results.txt")
 results = open(results_path, 'w')
 
 results.write("Election Results") 
