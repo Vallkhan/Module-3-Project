@@ -1,24 +1,28 @@
 import os
 import csv
 
-with open(r'C:\Users\vallk\Desktop\Boot_Camp\Python\Repository\Module-3-Project\PyBank\Resources\budget_data.csv') as file:
+csvpath =os.path.join(".","Resources","budget_data.csv")
+
+with open(csvpath,"r",encoding="utf") as file:
     raw_data = csv.reader(file)
     header = next(raw_data)
         
     data = []
     for line in raw_data:
-        data.append(line)    
+        data.append(line)  
           
+# Created a dates list      
 dates = []   
 for line in data:
     dates.append(line[0])    
 
+# Created a profits list 
 profit = []
 for line in data:
     profit.append(int(line[1])) 
 
+# Created a profit change list 
 change = []
-
 for x in range(len(profit)):
    if profit[x] != profit[0]:
       change.append(profit[x] - profit[x-1])
@@ -31,8 +35,8 @@ max_profit_date = dates[change.index(max_profit)+1]
 min_profit = min(change)
 min_profit_date = dates[change.index(min_profit)+1]
 
-analysis_path = os.path.join("analysis", "Financial_Analysis.txt")
-
+# Generated txt file with the results
+analysis_path = os.path.join(".","analysis", "Financial_Analysis.txt")
 analysis = open(analysis_path,'w')
 
 analysis.write("\n"+"\n"+"Financial Analysis")
