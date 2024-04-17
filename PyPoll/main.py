@@ -61,7 +61,7 @@ DeGette_percentage = format(DeGette_votes/len(candidate),".3%")
 Doane_percentage = format(Doane_votes/len(candidate),".3%")
 total_votes = len(ballot)
 
-# Created the txt file 
+# Generated the txt file 
 results_path = os.path.join("..","PyPoll", "analysis", "Election_Results.txt")
 results = open(results_path, 'w')
 

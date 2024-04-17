@@ -26,7 +26,9 @@ change = []
 for x in range(len(profit)):
    if profit[x] != profit[0]:
       change.append(profit[x] - profit[x-1])
-      
+ 
+ 
+# Aggregated the data
 total_months = len(dates) 
 Total = sum(profit)   
 Average_change = round(sum(change)/len(change),2)
